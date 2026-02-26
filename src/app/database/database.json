@@ -1,0 +1,40 @@
+{
+  "memes": [
+    {
+      "id": "0000",
+      "path": "database/memes-library/0000.jpg",
+      "likes": 0
+    },
+    {
+      "id": "0001",
+      "path": "database/memes-library/0001.jpg",
+      "likes": 0
+    },
+    {
+      "id": "0002",
+      "path": "database/memes-library/0002.jpg",
+      "likes": 0
+    },
+    {
+      "id": "0003",
+      "path": "database/memes-library/0003.jpg",
+      "likes": 0
+    },
+    {
+      "id": "0004",
+      "path": "database/memes-library/0004.jpg",
+      "likes": 0
+    },
+    {
+      "id": "0005",
+      "path": "database/memes-library/0005.jpg",
+      "likes": 0
+    },
+    {
+      "id": "0006",
+      "path": "database/memes-library/0006.jpg",
+      "likes": 0
+    }
+  ]
+
+}

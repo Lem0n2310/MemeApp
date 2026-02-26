@@ -1,4 +1,5 @@
 export interface Meme {
-  id: number;
-  url: string;
+  id: string;
+  path: string;
+  likes: number;
 }
