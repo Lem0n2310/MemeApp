@@ -9,10 +9,10 @@ import {sendDebugMessage} from '@angular/cli/src/commands/mcp/tools/onpush-zonel
   styleUrl: './meme-card.scss',
 })
 export class MemeCard {
-  @Input() mem!: Meme;
+  readonly mem = input.required<Meme>();
 
   get path() {
-    return this.mem?.path;
+    return this.mem()?.path;
   }
 
   readonly p = signal<string>(this.mem.path);

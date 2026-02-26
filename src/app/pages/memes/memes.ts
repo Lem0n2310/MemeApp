@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, signal} from '@angular/core';
 import {Header} from '../../parts-of-pages/header/header';
 import {Footer} from '../../parts-of-pages/footer/footer';
 import {Container} from '../../parts-of-pages/container/container';
+import * as database from "../../database/database.json"
 
 @Component({
   selector: 'app-memes',
@@ -14,5 +15,6 @@ import {Container} from '../../parts-of-pages/container/container';
   styleUrl: './memes.scss',
 })
 export class Memes {
-
+    json = database;
+    readonly list = signal(database.allMemes);
 }

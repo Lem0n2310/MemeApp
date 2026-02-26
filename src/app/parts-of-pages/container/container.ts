@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, input, signal} from '@angular/core';
 import {MemeCard} from '../meme-card/meme-card';
+import {Meme} from '../../for-developing/models/meme.model';
 
 @Component({
   selector: 'app-container',
@@ -10,5 +11,5 @@ import {MemeCard} from '../meme-card/meme-card';
   styleUrl: './container.scss',
 })
 export class Container {
-
+  protected readonly list = input.required<Meme[]>();
 }

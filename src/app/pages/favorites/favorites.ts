@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Container} from "../../parts-of-pages/container/container";
+import {Container} from "../../parts-of-pages/container/container"
 import {Footer} from "../../parts-of-pages/footer/footer";
 import {Header} from "../../parts-of-pages/header/header";
 
