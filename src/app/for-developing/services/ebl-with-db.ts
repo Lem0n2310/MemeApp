@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import {Meme} from '../models/meme.model';
-import {Memes} from './memes';
 
 
 @Injectable({
