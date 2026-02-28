@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import {Container} from "../../parts-of-pages/container/container";
 import {Footer} from "../../parts-of-pages/footer/footer";
 
 @Component({
   selector: 'app-month-memes',
     imports: [
-        Container,
-        Footer
+      Footer
     ],
   templateUrl: './month-memes.html',
   styleUrl: './month-memes.scss',
