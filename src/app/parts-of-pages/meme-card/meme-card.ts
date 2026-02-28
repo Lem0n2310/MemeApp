@@ -1,9 +1,9 @@
-import {Component, computed, Input, input, signal} from '@angular/core';
+import {Component, input} from '@angular/core';
 import {Meme} from '../../for-developing/models/meme.model';
 
 @Component({
   selector: 'app-meme-card',
-  imports: [],
+  imports: [ ],
   templateUrl: './meme-card.html',
   styleUrl: './meme-card.scss',
 })
