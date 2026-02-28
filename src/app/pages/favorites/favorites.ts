@@ -6,7 +6,6 @@ import {Header} from "../../parts-of-pages/header/header";
 @Component({
   selector: 'app-favorites',
     imports: [
-        Container,
         Footer
     ],
   templateUrl: './favorites.html',

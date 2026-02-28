@@ -1,10 +1,7 @@
 <div class="card">
-  <img src={{ p }}>
+  <img [src]="mem().path" [alt]="mem().id">
   <div class="btn">
-    <!-- LikeBtn.com BEGIN -->
-    <span class="likebtn-wrapper" data-lang="ru" data-i18n_like=" " data-white_label="true" data-identifier="item_1" data-show_like_label="false" data-dislike_enabled="false" data-icon_dislike_show="false" data-counter_show="false" data-popup_disabled="true" data-share_enabled="false" data-lazy_load="true" data-tooltip_enabled="false"></span>
-    <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
-    <!-- LikeBtn.com END -->
+    <button>like</button>
     <button>to favorites</button>
   </div>
 </div>

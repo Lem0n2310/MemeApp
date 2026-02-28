@@ -11,5 +11,5 @@ import {Meme} from '../../for-developing/models/meme.model';
   styleUrl: './container.scss',
 })
 export class Container {
-  protected readonly list = input.required<Meme[]>();
+  readonly list = input.required<Meme[]>();
 }
