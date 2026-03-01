@@ -1,15 +1,35 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import {
+  TuiAppearance,
+  TuiButton,
+  TuiTextfield,
+  TuiTitle,
+} from '@taiga-ui/core';
+import {TuiCardLarge, TuiForm, TuiHeader} from '@taiga-ui/layout';
 import {Footer} from '../../parts-of-pages/footer/footer';
-import {Header} from '../../parts-of-pages/header/header';
 
 @Component({
-  selector: 'app-account',
+  standalone: true,
+  exportAs: "RegistrationForm",
   imports: [
-    Footer
+    ReactiveFormsModule,
+    TuiAppearance,
+    TuiButton,
+    TuiCardLarge,
+    TuiForm,
+    TuiHeader,
+    TuiTextfield,
+    TuiTitle,
+    Footer,
   ],
   templateUrl: './account.html',
-  styleUrl: './account.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Account {
-
+  protected readonly form = new FormGroup({
+    name: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.email),
+    password: new FormControl('', Validators.minLength(5)),
+  });
 }

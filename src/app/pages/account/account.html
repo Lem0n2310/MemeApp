@@ -1,2 +1,62 @@
-<button>add meme</button>
+<div style="min-height: 97vh; display: flex; justify-content: center; align-items: center; padding-top: 10px; box-sizing: border-box;">
+<form
+  tuiAppearance="floating"
+  tuiCardLarge
+  tuiForm="l"
+  [formGroup]="form"
+  style="width: 80%; height: 60%; max-width: 700px"
+>
+  <header tuiHeader>
+    <h2 tuiTitle>
+      Регистрация
+      <span tuiSubtitle>Расскажите нам о себе</span>
+    </h2>
+  </header>
+  <ng-container>
+  <tui-textfield>
+    <label tuiLabel>Ваше имя</label>
+    <input
+      formControlName="name"
+      placeholder="Джон Уик"
+      tuiTextfield
+    />
+  </tui-textfield>
+    <tui-textfield>
+      <label tuiLabel>Почта</label>
+      <input
+        formControlName="email"
+        placeholder="john@wick.com"
+        tuiTextfield
+        type="email"
+      />
+    </tui-textfield>
+  </ng-container>
+  <tui-textfield>
+    <label tuiLabel>Пароль</label>
+    <input
+      formControlName="password"
+      placeholder="Ваш пароль"
+      tuiTextfield
+      type="password"
+    />
+  </tui-textfield>
+  <footer>
+    <button
+      appearance="secondary"
+      tuiButton
+      type="button"
+    >
+      Отмена
+    </button>
+    <button
+      tuiButton
+      type="submit"
+    >
+      Подтвердить
+    </button>
+  </footer>
+</form>
+</div>
 <app-footer></app-footer>
+
+

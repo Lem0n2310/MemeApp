@@ -1,7 +1,33 @@
-<div class="card">
-  <img [src]=mem().path [alt]=mem().id loading="lazy">
-  <div class="btn">
-    <button>like</button>
-    <button>dislike</button>
+<div tuiPlatform="web" class="card">
+  <div
+    tuiCardLarge
+    tuiSurface="floating"
+    style="background-color: blanchedalmond"
+  >
+    <img class="img" [src]=mem().path [alt]=mem().id loading="lazy">
+
+    <footer>
+      <button
+        style="margin-right: 20px"
+        appearance="accent"
+        size="m"
+        tuiButton
+        type="button"
+        [class.active]="liked"
+        (click)="toggleLike()"
+      >
+        <tui-icon icon="@tui.thumbs-up"></tui-icon>
+      </button>
+      <button
+        appearance="accent"
+        size="m"
+        tuiButton
+        type="button"
+        [class.active]="disliked"
+        (click)="toggleDislike()"
+      >
+        <tui-icon icon="@tui.thumbs-down"></tui-icon>
+      </button>
+    </footer>
   </div>
 </div>
