@@ -8,6 +8,7 @@ import {
 } from '@taiga-ui/core';
 import {TuiCardLarge, TuiForm, TuiHeader} from '@taiga-ui/layout';
 import {Footer} from '../../parts-of-pages/footer/footer';
+import {FileTaker} from '../../parts-of-pages/file-taker/file-taker';
 
 @Component({
   standalone: true,
@@ -22,6 +23,7 @@ import {Footer} from '../../parts-of-pages/footer/footer';
     TuiTextfield,
     TuiTitle,
     Footer,
+    FileTaker,
   ],
   templateUrl: './account.html',
   changeDetection: ChangeDetectionStrategy.OnPush,

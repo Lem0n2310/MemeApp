@@ -25,6 +25,9 @@ export class MemeCard {
 
 
   toggleLike(): void {
+    if (!this.liked) this.mem().likes++;
+    else this.mem().likes--;
+
     this.liked = !this.liked;
 
     if (this.liked) {
@@ -33,6 +36,9 @@ export class MemeCard {
   }
 
   toggleDislike(): void {
+    if (!this.disliked) this.mem().likes--;
+    else this.mem().likes++;
+
     this.disliked = !this.disliked;
 
     if (this.disliked) {
