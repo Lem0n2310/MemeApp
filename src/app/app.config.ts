@@ -4,12 +4,22 @@ import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
+import {provideIndexedDb} from 'ngx-indexed-db';
 
 export const appConfig: ApplicationConfig = {
   providers: [
         provideAnimations(),
         provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
-        provideEventPlugins()
+        provideEventPlugins(),
+    provideIndexedDb({
+      name: 'database',
+      version: 1,
+      objectStoresMeta: [{
+        store: 'rating',
+        storeConfig: { keyPath: 'id', autoIncrement: false },
+        storeSchema: []
+      }]
+    })
     ]
 };
