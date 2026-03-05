@@ -1,14 +1,14 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {
   TuiAppearance,
   TuiButton,
   TuiTextfield,
   TuiTitle,
 } from '@taiga-ui/core';
-import {TuiCardLarge, TuiForm, TuiHeader} from '@taiga-ui/layout';
+import {TuiBlockDetails, TuiCardLarge, TuiForm, TuiHeader} from '@taiga-ui/layout';
 import {Footer} from '../../parts-of-pages/footer/footer';
-import {TuiSegmented} from '@taiga-ui/kit';
+import {TuiAvatar, TuiSegmented} from '@taiga-ui/kit';
 import {NgIf} from '@angular/common';
 
 @Component({
@@ -26,16 +26,15 @@ import {NgIf} from '@angular/common';
     Footer,
     TuiSegmented,
     NgIf,
+    TuiAvatar,
+    TuiBlockDetails,
+    FormsModule,
   ],
-  templateUrl: './account.html',
+  templateUrl: './fileTakerDialog.html',
+  styleUrl: './fileTakerDialog.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Account {
-  protected readonly form = new FormGroup({
-    name: new FormControl('', Validators.required),
-    email: new FormControl(''),
-    password: new FormControl('', Validators.minLength(8)),
-    basic: new FormControl(true),
-  });
+export class FileTakerDialog {
 
 }
+
