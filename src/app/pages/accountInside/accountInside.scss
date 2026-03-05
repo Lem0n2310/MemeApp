@@ -1,0 +1,97 @@
+.account-container {
+  width: 100%;
+  min-height: 97vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.account-card {
+  max-width: 600px;
+  width: 100%;
+  background: var(--tui-background-elevation-1, #ffffff);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.avatar-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.profile-avatar {
+  cursor: pointer;
+  transition: transform 0.2s;
+  border: 4px solid var(--tui-background-accent-1, #526ed3);
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+}
+
+.avatar-edit-button {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(calc(50% + 40px));
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--tui-background-elevation-2, #f0f0f0);
+  border: 2px solid var(--tui-background-accent-1, #526ed3);
+}
+
+.form-section {
+  width: 100%;
+}
+
+.row-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.username-field {
+  flex: 1;
+  min-width: 250px;
+}
+
+.username-button {
+  flex-shrink: 0;
+  min-width: 140px;
+}
+
+
+.floating-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  border-radius: 28px;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.floating-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+

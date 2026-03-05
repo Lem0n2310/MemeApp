@@ -3,6 +3,7 @@ import {Memes} from './pages/memes/memes';
 import {MonthMemes} from './pages/month-memes/month-memes';
 import {Favorites} from './pages/favorites/favorites';
 import {Account} from './pages/account/account';
+import {AccountInside} from './pages/accountInside/accountInside';
 
 export const routes: Routes = [
   {
@@ -20,6 +21,10 @@ export const routes: Routes = [
   {
     path: 'account',
     component: Account,
+  },
+  {
+    path: 'accountInside',
+    component: AccountInside,
   }
 
 ];

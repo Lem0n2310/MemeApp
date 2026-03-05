@@ -1,0 +1,103 @@
+<div class="account-container">
+
+  <div
+    *ngIf="showDialog"
+    class="account-card"
+  >
+  <label tuiInputFiles>
+    <input
+      #validator="tuiInputFilesValidator"
+      accept="image/*"
+      tuiInputFiles
+      [formControl]="control"
+      [multiple]="true"
+      (reject)="onReject($event)"
+    />
+  </label>
+
+  <tui-files class="tui-space_top-1">
+    <tui-file
+      *ngFor="let file of accepted$ | async"
+      [file]="file"
+      (remove)="onRemove(file)"
+    />
+
+    <tui-file
+      *ngFor="let file of rejected"
+      state="error"
+      [file]="(file | tuiFileRejected: validator | async) || file"
+      (remove)="onRemove(file)"
+    />
+  </tui-files>
+
+  <tui-error
+    [error]="['maxLength'] | tuiFieldError | async"
+    [formControl]="control"
+  />
+  </div>
+
+
+
+
+  <div
+    class="account-card"
+    *ngIf = "!showDialog"
+  >
+    <!-- Аватарка по центру -->
+    <div class="avatar-wrapper">
+      <tui-avatar
+        [src]="avatarSrc || 'AV'"
+        [size]="'xxl'"
+        class="profile-avatar"
+      />
+
+      <button
+        tuiButton
+        size="xs"
+        appearance="secondary"
+        class="avatar-edit-button"
+        (click)="changeAvatar()"
+      >
+
+      </button>
+    </div>
+
+    <div class="form-section">
+      <div class="row-container">
+        <tui-textfield class="username-field">
+          <label>Имя пользователя</label>
+          <input
+            [(ngModel)]="name"
+            [invalid]="verificationError"
+            [readOnly]="readonly"
+            placeholder="John Wick"
+            tuiTextfield
+          >
+        </tui-textfield>
+
+        <button
+          tuiButton
+          class="username-button"
+          (click)="changeName()"
+        >
+          Изменить имя
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Плавающая кнопка -->
+<button
+  tuiButton
+  class="floating-button"
+  size="l"
+  appearance="primary"
+  (click)="changeShowDialog()"
+>
+  +
+</button>
+
+<!-- Футер -->
+<app-footer></app-footer>
